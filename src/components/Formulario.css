@@ -1,78 +1,93 @@
 /* Estilo general para un diseño profesional con tu imagen de fondo */
 body {
+  /* Elegí una fuente moderna y limpia para un diseño profesional. */
   font-family: 'Poppins', sans-serif;
+  /* Usé una imagen de fondo que cubre toda la pantalla para un efecto visual impactante. */
   background: url('https://wallpapers.com/images/hd/1080p-winter-background-1920-x-1080-h6b4qm35a9ivetz5.jpg') no-repeat center center/cover;
+  /* Coloqué texto en color blanco para asegurar la legibilidad sobre el fondo oscuro. */
   color: #ffffff;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  margin: 0; /* Eliminé márgenes para un diseño más limpio. */
+  padding: 0; /* Eliminé padding para centrar correctamente los elementos. */
+  display: flex; /* Usé flexbox para centrar los elementos en pantalla. */
+  justify-content: center; /* Centré horizontalmente los elementos. */
+  align-items: center; /* Centré verticalmente los elementos. */
+  height: 100vh; /* Aseguré que el contenido ocupe toda la altura de la pantalla. */
 }
 
 /* Contenedor principal */
 section {
+  /* Centré y alineé los elementos dentro del contenedor. */
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Usé una disposición en columna para un diseño más claro. */
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.5rem; /* Añadí espacio uniforme entre los elementos. */
+  /* Añadí una animación para una transición suave al cargar. */
   animation: fadeIn 0.8s ease-in-out;
   width: 100%;
-  max-width: 400px;
+  max-width: 400px; /* Limité el ancho para mantener una estética limpia. */
 }
 
 /* Título principal */
 h1 {
+  /* Hice el título más grande y legible, dándole énfasis. */
   font-size: 2.5rem;
   font-weight: bold;
   color: #f5f5f5;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Sombras para resaltar el texto */
+  margin-bottom: 1rem; /* Añadí espacio debajo del título. */
+  text-transform: uppercase; /* Apliqué mayúsculas para un estilo profesional. */
+  letter-spacing: 1px; /* Aumenté el espacio entre letras para mejor legibilidad. */
+  /* Añadí sombras al texto para destacarlo contra el fondo. */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* Tarjeta del formulario con transparencia */
 .formulario {
-  background: rgba(255, 255, 255, 0.75); /* Fondo más transparente */
-  backdrop-filter: blur(15px); /* Mayor desenfoque */
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  /* Usé un fondo semitransparente para mantener el diseño atractivo. */
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(15px); /* Apliqué desenfoque para un efecto elegante. */
+  padding: 2rem; /* Añadí suficiente espacio interno para comodidad visual. */
+  border-radius: 16px; /* Redondeé bordes para un diseño moderno. */
+  /* Usé una sombra para dar profundidad a la tarjeta. */
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
   width: 100%;
-  max-width: 400px;
-  color: #333;
+  max-width: 400px; /* Limité el ancho para dispositivos más pequeños. */
+  color: #333; /* Elegí un color de texto oscuro para contraste. */
+  /* Añadí transiciones para efectos suaves en hover. */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .formulario:hover {
+  /* Añadí un pequeño movimiento y sombra extra para un efecto interactivo. */
   transform: translateY(-5px);
   box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.4);
 }
 
 /* Subtítulos */
 h5 {
+  /* Reduje el tamaño de los subtítulos para diferenciarlos del título principal. */
   font-size: 1rem;
-  margin: 1rem 0 0.5rem;
-  color: #4e54c8;
-  font-weight: 600;
+  margin: 1rem 0 0.5rem; /* Añadí espacio encima y debajo. */
+  color: #4e54c8; /* Elegí un color que combina con el esquema de colores general. */
+  font-weight: 600; /* Usé un grosor medio para destacar los subtítulos. */
 }
 
 /* Inputs con diseño profesional */
 input {
+  /* Aseguré que los inputs sean fáciles de usar con un tamaño adecuado. */
   width: 100%;
-  padding: 0.9rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-  box-sizing: border-box;
+  padding: 0.9rem; /* Añadí espacio interno para comodidad. */
+  margin-bottom: 1rem; /* Separé visualmente los inputs entre sí. */
+  border: 1px solid #ccc; /* Usé un borde claro para un diseño limpio. */
+  border-radius: 10px; /* Redondeé bordes para un aspecto moderno. */
+  font-size: 1rem; /* Usé un tamaño de texto estándar. */
+  box-sizing: border-box; /* Aseguré que el padding esté incluido en el tamaño total. */
+  /* Añadí transiciones para efectos interactivos al enfocarse. */
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus {
+  /* Cambié el color del borde y añadí una sombra para indicar el foco. */
   outline: none;
   border-color: #4e54c8;
   box-shadow: 0 0 8px rgba(78, 84, 200, 0.5);
@@ -80,86 +95,43 @@ input:focus {
 
 /* Botón elegante */
 button {
-    background: linear-gradient(90deg, #4e54c8, #8f94fb);
-    color: #fff;
-    border: none;
-    border-radius: 15px;
-    padding: 1rem;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    width: 100%;
-  }
-  
-  button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(78, 84, 200, 0.5);
-    background: linear-gradient(90deg, #8f94fb, #4e54c8);
-  }
-
-/* Texto adicional mejorado */
-p {
-    margin-top: 1.5rem;
-    color: #ffffff;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    font-style: italic;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(78, 84, 200, 0.8); /* Sombra más definida y colorida */
-    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
-    padding: 0.5rem 0;
-    background: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para hacer el texto más legible */
-    border-radius: 10px;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra de contorno para resaltar más */
-  }
-  
-  p:hover {
-    color: #8f94fb; /* Color suave al pasar el ratón */
-    text-shadow: 0 0 15px rgba(78, 84, 200, 1), 0 0 30px rgba(78, 84, 200, 0.8); /* Sombra más pronunciada en hover */
-    transform: translateY(-5px); /* Efecto más intenso en hover */
-  }
-  
-  /* Animación de entrada para darle más vida */
-  p {
-    animation: fadeInText 1s ease-out;
-  }
-
-
-
-/* Animaciones suaves */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* Usé un degradado para un diseño atractivo y moderno. */
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  color: #fff; /* Elegí texto blanco para contraste. */
+  border: none;
+  border-radius: 15px; /* Bordes redondeados para un aspecto profesional. */
+  padding: 1rem; /* Aseguré suficiente espacio interno. */
+  font-size: 1rem;
+  font-weight: bold; /* Usé un peso más grueso para destacar el texto del botón. */
+  cursor: pointer; /* Cambié el cursor a pointer para indicar interactividad. */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Añadí transiciones para interacciones suaves. */
+  width: 100%;
 }
 
+button:hover {
+  /* Cambié el degradado, la sombra y el movimiento en hover para dar retroalimentación visual. */
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(78, 84, 200, 0.5);
+  background: linear-gradient(90deg, #8f94fb, #4e54c8);
+}
 
 /* Responsividad para pantallas pequeñas (móviles) */
 @media (max-width: 600px) {
-    h1 {
-      font-size: 2rem;
-    }
-  
-    .formulario {
-      padding: 1.5rem;
-    }
-  
-    input {
-      padding: 0.7rem;
-    }
-  
-    button {
-      padding: 0.8rem;
-      font-size: 0.9rem;
+  /* Ajusté el tamaño de los textos y paddings para pantallas más pequeñas. */
+  h1 {
+    font-size: 2rem;
   }
- }
+
+  .formulario {
+    padding: 1.5rem;
+  }
+
+  input {
+    padding: 0.7rem;
+  }
+
+  button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
