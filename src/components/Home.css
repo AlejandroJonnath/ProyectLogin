@@ -1,13 +1,14 @@
-/* General: aplica un fondo de imagen a toda la página */
+/* General: aplica un fondo de imagen con un degradado oscuro */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-image: url('https://s1.1zoom.me/b5050/150/Winter_Sky_Scenery_Snow_481112_1920x1080.jpg'); /* Cambia esto por tu URL de imagen */
+  font-family: 'Poppins', Arial, sans-serif; /* Fuente más moderna */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://s1.1zoom.me/b5050/150/Winter_Sky_Scenery_Snow_481112_1920x1080.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
 /* Header: barra de navegación */
@@ -16,13 +17,13 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
   z-index: 1000;
   padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Navegación */
 nav ul {
   display: flex;
   justify-content: space-evenly;
@@ -34,92 +35,173 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #ffcc00;
+  color: #ffdd00;
   font-size: 18px;
   font-weight: bold;
   padding: 10px 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.2s ease;
 }
 
 nav ul li a:hover {
   color: #000;
-  background-color: #ffcc00;
-  border-radius: 5px;
+  background-color: #ffdd00;
+  border: 2px solid #ffdd00;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 221, 0, 0.4);
 }
 
-/* Estilo para el título (h1) con clase "tituloBienvenida" */
+/* Título */
 .tituloBienvenida {
-font-size: 20px;
-color: #ffcc00;
-text-align: center;
-text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
-top: -20px;
-margin-bottom: 30px;
-padding: 20px 10px;
-border: 3px solid rgba(255, 204, 0, 0.9);
-border-radius: 15px;
-background: rgba(0, 0, 0, 0.6);
-display: inline-block;
-width: 80%;
-max-width: 1000px;
-margin: -20px auto;
-position: relative;
+  font-size: 28px;
+  color: #ffcc00;
+  text-align: center;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9);
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 4px solid rgba(255, 204, 0, 0.9);
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  width: 85%;
+  max-width: 1000px;
+  margin: 40px auto;
+  position: relative;
+  animation: fadeIn 1.5s ease-out;
 }
 
-/* Estilo para el párrafo (p) con clase "parrafoBienvenida" */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Párrafo */
 .parrafoBienvenida {
-  font-size: 16px;
+  font-size: 18px;
   color: #ffffff;
-  text-align: center;
+  text-align: justify;
   line-height: 1.8;
   max-width: 900px;
   margin: 0 auto;
   padding: 20px 30px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
   width: 90%;
   margin-top: 20px;
+  animation: slideIn 1.5s ease-out;
 }
 
-/* Main: imágenes y párrafos */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Main */
 main {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
-  padding: 20px;
-  margin-top: 60px; /* Esto hace que las imágenes estén más cerca del título */
+  padding: 40px 20px;
+  margin-top: 120px;
 }
 
 .image-container {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   overflow: hidden;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .image-container:hover {
-  transform: scale(1.05); /* Efecto de zoom */
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(255, 221, 0, 0.5);
 }
 
-/* Estilo para la información desplegada debajo de las imágenes */
 .info {
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para la información */
-  padding: 10px;
-  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  border-radius: 15px;
   margin-top: 10px;
   width: 90%;
   max-width: 400px;
   text-align: left;
-  box-shadow: 0 4px 10px rgba(50, 100, 50, 0.6);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .tituloBienvenida {
+    font-size: 22px;
+    padding: 15px;
+    width: 95%;
+  }
+
+  .parrafoBienvenida {
+    font-size: 16px;
+    padding: 15px;
+    width: 95%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-container {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Responsive para pantallas 2K */
+@media (min-width: 2115px) {
+  .tituloBienvenida {
+    font-size: 36px;
+    max-width: 1200px;
+  }
+
+  .parrafoBienvenida {
+    font-size: 20px;
+    max-width: 1200px;
+  }
+
+  .image-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
 }

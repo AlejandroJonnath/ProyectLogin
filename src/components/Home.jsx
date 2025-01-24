@@ -4,7 +4,7 @@ import "./Home.css";
 // Importa las imágenes desde la carpeta img
 import imagen1 from './img/Adriel.png'; 
 import imagen2 from './img/Bryan.png'; 
-import imagen3 from './img/David.png';
+import imagen3 from './img/Davilongo.jpg';
 import imagen4 from './img/Martin.png';
 
 export function Home({ nombreUsuario }) {
