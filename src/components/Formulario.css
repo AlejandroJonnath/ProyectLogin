@@ -1,0 +1,166 @@
+/* Estilo general para un diseño profesional con tu imagen de fondo */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('https://wallpapers.com/images/hd/1080p-winter-background-1920-x-1080-h6b4qm35a9ivetz5.jpg') no-repeat center center/cover;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor principal */
+section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  animation: fadeIn 0.8s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f5f5f5;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Sombras para resaltar el texto */
+}
+
+/* Tarjeta del formulario con transparencia */
+.formulario {
+  background: rgba(255, 255, 255, 0.75); /* Fondo más transparente */
+  backdrop-filter: blur(15px); /* Mayor desenfoque */
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  width: 100%;
+  max-width: 400px;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtítulos */
+h5 {
+  font-size: 1rem;
+  margin: 1rem 0 0.5rem;
+  color: #4e54c8;
+  font-weight: 600;
+}
+
+/* Inputs con diseño profesional */
+input {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4e54c8;
+  box-shadow: 0 0 8px rgba(78, 84, 200, 0.5);
+}
+
+/* Botón elegante */
+button {
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    width: 100%;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(78, 84, 200, 0.5);
+    background: linear-gradient(90deg, #8f94fb, #4e54c8);
+  }
+
+/* Texto adicional mejorado */
+p {
+    margin-top: 1.5rem;
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(78, 84, 200, 0.8); /* Sombra más definida y colorida */
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    padding: 0.5rem 0;
+    background: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para hacer el texto más legible */
+    border-radius: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra de contorno para resaltar más */
+  }
+  
+  p:hover {
+    color: #8f94fb; /* Color suave al pasar el ratón */
+    text-shadow: 0 0 15px rgba(78, 84, 200, 1), 0 0 30px rgba(78, 84, 200, 0.8); /* Sombra más pronunciada en hover */
+    transform: translateY(-5px); /* Efecto más intenso en hover */
+  }
+  
+  /* Animación de entrada para darle más vida */
+  p {
+    animation: fadeInText 1s ease-out;
+  }
+
+
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Responsividad para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .formulario {
+      padding: 1.5rem;
+    }
+  
+    input {
+      padding: 0.7rem;
+    }
+  
+    button {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+  
