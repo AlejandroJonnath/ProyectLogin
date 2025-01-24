@@ -22,7 +22,7 @@ export function Home({ nombreUsuario }) {
         <nav>
           <ul>
             <li>
-              <a href="#inicio">Inicio</a>
+              <a href="../Formulario.jsx">Inicio</a>
             </li>
             <li>
               <a href="#sobre">Grupo 3</a>
@@ -88,6 +88,6 @@ export function Home({ nombreUsuario }) {
           </p>
         )}
       </main>
-    </>
-  );
+  </>
+ );
 }
