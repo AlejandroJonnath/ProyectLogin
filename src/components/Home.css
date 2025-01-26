@@ -1,207 +1,254 @@
 /* General: aplica un fondo de imagen con un degradado oscuro */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', Arial, sans-serif; /* Fuente más moderna */
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://s1.1zoom.me/b5050/150/Winter_Sky_Scenery_Snow_481112_1920x1080.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: #ffffff;
-  overflow-x: hidden;
+  margin: 0; /* Elimina márgenes predeterminados del navegador */
+  padding: 0; /* Elimina relleno predeterminado del navegador */
+  font-family: 'Poppins', Arial, sans-serif; /* Usa la fuente Poppins, o Arial como respaldo */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), 
+    url('https://s1.1zoom.me/b5050/150/Winter_Sky_Scenery_Snow_481112_1920x1080.jpg'); /* Agrega un degradado oscuro sobre una imagen de fondo */
+  background-size: cover; /* La imagen cubrirá todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Fija la imagen al fondo al hacer scroll */
+  color: #ffffff; /* Define el color de texto por defecto como blanco */
+  overflow-x: hidden; /* Oculta el desbordamiento horizontal */
 }
 
 /* Header: barra de navegación */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(15px);
-  z-index: 1000;
-  padding: 10px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: fixed; /* Fija la barra en la parte superior */
+  top: 0; /* Define la posición superior en 0 */
+  left: 0; /* Define la posición izquierda en 0 */
+  width: 100%; /* Ocupa el 100% del ancho */
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con transparencia */
+  backdrop-filter: blur(15px); /* Aplica un desenfoque al fondo */
+  z-index: 1000; /* Garantiza que la barra esté por encima de otros elementos */
+  padding: 10px 20px; /* Espaciado interno */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra debajo de la barra */
+  display: flex; /* Establece un contenedor flex */
+  justify-content: space-between; /* Distribuye elementos en extremos */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
 }
 
-nav ul {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+nav {
+  display: flex; /* Contenedor flex para la navegación */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  justify-content: space-between; /* Espacia los elementos uniformemente */
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #ffdd00;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: 2px solid transparent;
-  border-radius: 30px;
-  transition: background-color 0.4s ease, color 0.4s ease, transform 0.2s ease;
+/* Contenedor para el texto del menú */
+.nav-text ul {
+  display: flex; /* Hace que los elementos del menú estén en línea */
+  list-style: none; /* Elimina los estilos de lista predeterminados */
+  margin: 0; /* Sin margen externo */
+  padding: 0; /* Sin relleno interno */
+  gap: 15px; /* Espaciado entre elementos */
 }
 
-nav ul li a:hover {
-  color: #000;
-  background-color: #ffdd00;
-  border: 2px solid #ffdd00;
-  transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(255, 221, 0, 0.4);
+.nav-text ul li a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: #ffdd00; /* Define el color del texto en amarillo */
+  font-size: 18px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  padding: 10px 15px; /* Espaciado interno */
+  border: 2px solid transparent; /* Borde inicial transparente */
+  border-radius: 30px; /* Bordes redondeados */
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.2s ease; /* Animaciones suaves */
+}
+
+.nav-text ul li a:hover {
+  color: #000; /* Cambia el color del texto a negro al pasar el mouse */
+  background-color: #ffdd00; /* Fondo amarillo */
+  border: 2px solid #ffdd00; /* Borde amarillo */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 5px 15px rgba(255, 221, 0, 0.4); /* Agrega sombra */
+}
+
+/* Contenedor para los íconos */
+.nav-icons {
+  margin-right: 100px; /* Desplaza los íconos hacia la izquierda */
+}
+
+.nav-icons ul {
+  display: flex; /* Los íconos estarán en línea */
+  list-style: none; /* Sin viñetas de lista */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin relleno */
+  gap: 15px; /* Espaciado entre íconos */
+}
+
+.nav-icons ul li img.icon {
+  width: 24px; /* Ancho de los íconos */
+  height: 24px; /* Altura de los íconos */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Animaciones suaves */
+  border-radius: 50%; /* Bordes redondeados */
+}
+
+/* Efectos al pasar el mouse sobre los íconos */
+.nav-icons ul li img.icon:hover {
+  transform: scale(1.2); /* Aumenta el tamaño */
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3); /* Agrega sombra */
+}
+
+.nav-icons ul li img.icon.instagram:hover {
+  filter: drop-shadow(0 0 5px #E1306C) saturate(2); /* Efecto específico de Instagram */
+}
+
+.nav-icons ul li img.icon.whatsapp:hover {
+  filter: drop-shadow(0 0 5px #25D366) saturate(2); /* Efecto específico de WhatsApp */
+}
+
+.nav-icons ul li img.icon.youtube:hover {
+  filter: drop-shadow(0 0 5px #FF0000) saturate(2); /* Efecto específico de YouTube */
 }
 
 /* Título */
 .tituloBienvenida {
-  font-size: 28px;
-  color: #ffcc00;
-  text-align: center;
-  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9);
-  margin-bottom: 30px;
-  padding: 20px;
-  border: 4px solid rgba(255, 204, 0, 0.9);
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.8);
-  display: inline-block;
-  width: 85%;
-  max-width: 400px;
-  margin: 50px auto;
-  position: fixed;
-  animation: fadeIn 1.5s ease-out;
+  font-size: 35px; /* Tamaño del texto */
+  color: #ffcc00; /* Color del texto */
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9); /* Sombra del texto */
+  padding: 10px 20px; /* Relleno interno ajustado */
+  border: 4px solid rgba(255, 204, 0, 0.9); /* Borde de color amarillo */
+  border-radius: 20px; /* Bordes redondeados */
+  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+  position: absolute; /* Posicionamiento absoluto para colocarlo donde quieras */
+  top: 150px; /* Un poco más abajo */
+  left: 150px; /* Un poco más a la derecha */
+  z-index: 1000; /* Asegura que esté en el frente de otros elementos */
+  animation: fadeIn 1.5s ease-out; /* Animación de entrada */
 }
 
+/* Animación para el título */
 @keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: translateY(-20px);
+    opacity: 0; /* Comienza con opacidad 0 (invisible) */
+    transform: translateY(-20px); /* Empuja el elemento hacia arriba */
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Termina completamente visible */
+    transform: translateY(0); /* Termina en su posición original */
   }
 }
 
 /* Párrafo */
 .parrafoBienvenida {
-  font-size: 18px;
-  color: #ffffff;
-  text-align: justify;
-  line-height: 1.8;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px 30px;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-  width: 90%;
-  margin-top: 20px;
-  animation: slideIn 1.5s ease-out;
+  font-size: 18px; /* Tamaño del texto */
+  color: #ffffff; /* Color blanco */
+  text-align: justify; /* Alineación justificada */
+  line-height: 1.8; /* Espaciado entre líneas */
+  max-width: 900px; /* Ancho máximo de 900px */
+  margin: 0 auto; /* Centrado automático */
+  padding: 20px 30px; /* Relleno interno */
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Sombra alrededor del párrafo */
+  width: 90%; /* Ocupa el 90% del contenedor */
+  margin-top: 20px; /* Margen superior de 20px */
+  animation: slideIn 1.5s ease-out; /* Animación de entrada con nombre 'slideIn' */
 }
 
+/* Animación para el párrafo */
 @keyframes slideIn {
   from {
-    opacity: 0;
-    transform: translateX(-30px);
+    opacity: 0; /* Comienza con opacidad 0 (invisible) */
+    transform: translateX(-30px); /* Comienza desplazado hacia la izquierda */
   }
   to {
-    opacity: 1;
-    transform: translateX(0);
+    opacity: 1; /* Termina completamente visible */
+    transform: translateX(0); /* Termina en su posición original */
   }
 }
 
 /* Main */
 main {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 40px 20px;
-  margin-top: 120px;
+  display: flex; /* Usamos flexbox para organizar los elementos */
+  justify-content: space-evenly; /* Distribuye los elementos con espacios iguales */
+  align-items: center; /* Alinea los elementos al centro */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea cuando es necesario */
+  gap: 20px; /* Espaciado entre los elementos */
+  padding: 40px 20px; /* Relleno interno */
+  margin-top: 120px; /* Margen superior para separar del header */
 }
 
 .image-container {
-  width: 220px;
-  height: 220px;
-  overflow: hidden;
-  border-radius: 20px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 220px; /* Ancho de las imágenes */
+  height: 220px; /* Altura de las imágenes */
+  overflow: hidden; /* Oculta el contenido que se desborda */
+  border-radius: 20px; /* Bordes redondeados */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Animación al hacer hover */
 }
 
 .image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
+  width: 100%; /* Las imágenes ocupan el 100% del contenedor */
+  height: 100%; /* La altura es igual al contenedor */
+  object-fit: cover; /* Mantiene la relación de aspecto sin deformar la imagen */
+  border-radius: 20px; /* Bordes redondeados para las imágenes */
 }
 
 .image-container:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 25px rgba(255, 221, 0, 0.5);
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al hacer hover */
+  box-shadow: 0 10px 25px rgba(255, 221, 0, 0.5); /* Sombra alrededor de la imagen */
 }
 
 .info {
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 15px;
-  border-radius: 15px;
-  margin-top: 10px;
-  width: 90%;
-  max-width: 400px;
-  text-align: left;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #ffffff; /* Color del texto */
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+  padding: 15px; /* Relleno interno */
+  border-radius: 15px; /* Bordes redondeados */
+  margin-top: 10px; /* Margen superior de 10px */
+  width: 90%; /* Ocupa el 90% del contenedor */
+  max-width: 400px; /* Ancho máximo de 400px */
+  text-align: left; /* Alineación a la izquierda */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); /* Sombra alrededor del contenedor */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al hacer hover */
 }
 
 .info:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+  transform: translateY(-10px); /* Desplaza hacia arriba al hacer hover */
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4); /* Sombra con opacidad cuando se pasa el mouse */
 }
 
 /* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
   .tituloBienvenida {
-    font-size: 22px;
-    padding: 15px;
-    width: 95%;
+    font-size: 22px; /* Ajusta el tamaño del texto */
+    padding: 15px; /* Ajusta el padding */
+    width: 95%; /* Ajusta el ancho */
   }
 
   .parrafoBienvenida {
-    font-size: 16px;
-    padding: 15px;
-    width: 95%;
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    padding: 15px; /* Ajusta el padding */
+    width: 95%; /* Ajusta el ancho */
   }
 
   nav ul {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Coloca los elementos del menú en una columna */
+    gap: 10px; /* Reduce el espacio entre los elementos */
   }
 
   .image-container {
-    width: 180px;
-    height: 180px;
+    width: 180px; /* Ajusta el tamaño de las imágenes */
+    height: 180px; /* Ajusta el tamaño de las imágenes */
   }
 }
 
 /* Responsive para pantallas 2K */
 @media (min-width: 2115px) {
   .tituloBienvenida {
-    font-size: 36px;
-    max-width: 1200px;
+    font-size: 36px; /* Ajusta el tamaño del texto */
+    max-width: 1200px; /* Aumenta el ancho máximo */
   }
 
   .parrafoBienvenida {
-    font-size: 20px;
-    max-width: 1200px;
+    font-size: 20px; /* Ajusta el tamaño del texto */
+    max-width: 1200px; /* Aumenta el ancho máximo */
   }
 
   .image-container {
-    width: 300px;
-    height: 300px;
+    width: 300px; /* Ajusta el tamaño de las imágenes */
+    height: 300px; /* Ajusta el tamaño de las imágenes */
   }
 
   nav ul li a {
-    font-size: 20px;
+    font-size: 20px; /* Ajusta el tamaño del texto del menú */
   }
 }

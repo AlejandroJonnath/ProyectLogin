@@ -3,9 +3,12 @@ import "./Home.css";
 
 // Importa las imágenes desde la carpeta img
 import imagen1 from './img/Adriel.png'; 
-import imagen2 from './img/Bryan.png'; 
 import imagen3 from './img/Davilongo.jpg';
 import imagen4 from './img/Martin.png';
+
+import LogoInstagram from './img/LogoInstagram.png';
+import LogoWasap from './img/LogoWasap.png';
+import LogoYoutube from './img/LogoYoutube.png';
 
 export function Home({ nombreUsuario }) {
   // Estado para controlar la visibilidad de la información
@@ -21,28 +24,40 @@ export function Home({ nombreUsuario }) {
     <>
       {/* Cabecera con un menú de navegación */}
       <header>
-        <nav>
-          <ul>
-            <li>
-              {/* Redirección al formulario */}
-              <a href="../Formulario.jsx">Inicio</a>
-            </li>
-            <li>
-              {/* Enlace a la sección del grupo */}
-              <a href="#sobre">Grupo 3</a>
-            </li>
-            <li>
-              {/* Enlace a la sección del proyecto */}
-              <a href="#contacto">Proyecto ITQ</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+  <nav>
+    <div className="nav-text">
+      <ul>
+        <li><a href="../Formulario.jsx">Inicio</a></li>
+        <li><a href="#sobre">Grupo 3</a></li>
+        <li><a href="#contacto">Proyecto ITQ</a></li>
+      </ul>
+    </div>
+    <div className="nav-icons">
+      <ul>
+        <li>
+          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+            <img src={LogoInstagram} alt="Instagram" className="icon instagram" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.whatsapp.com" target="_blank" rel="noreferrer">
+            <img src={LogoWasap} alt="WhatsApp" className="icon whatsapp" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
+            <img src={LogoYoutube} alt="YouTube" className="icon youtube" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
       {/* Sección de bienvenida */}
       <section>
         {/* Mostré el nombre del usuario que accedió como una bienvenida personalizada */}
-        <h1 className="tituloBienvenida">Bienvenido, {nombreUsuario}!</h1>
+        <h1 className="tituloBienvenida">Bienvenido, {nombreUsuario}. Nos encanta tenerte de vuelta!</h1>
       </section>
 
       <main>
@@ -85,7 +100,7 @@ export function Home({ nombreUsuario }) {
             <strong>Nombre:</strong> Martin Sebastian Rodríguez Cortez<br />
             <strong>Edad:</strong> 20 años<br />
             <strong>Carrera:</strong> Desarrollo en Software<br />
-            <strong>Descripción:</strong> Me gusta el fútbol, los Drilococos, programar páginas web y el Valorant.
+            <strong>Descripción:</strong> Me gusta el fútbol, los Drilococos, programar páginas web y el Valora
           </p>
         )}
       </main>
