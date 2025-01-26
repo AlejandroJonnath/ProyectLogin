@@ -100,31 +100,37 @@ nav {
   filter: drop-shadow(0 0 5px #FF0000) saturate(2); /* Efecto específico de YouTube */
 }
 
-/* Título */
 .tituloBienvenida {
   font-size: 35px; /* Tamaño del texto */
   color: #ffcc00; /* Color del texto */
   text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9); /* Sombra del texto */
-  padding: 10px 20px; /* Relleno interno ajustado */
-  border: 4px solid rgba(255, 204, 0, 0.9); /* Borde de color amarillo */
+  padding: 15px 25px; /* Relleno interno ajustado */
+  border: 5px solid rgba(255, 204, 0, 1); /* Borde de color amarillo */
   border-radius: 20px; /* Bordes redondeados */
-  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+  background: rgba(0, 0, 0, 0.9); /* Fondo oscuro más opaco */
   position: absolute; /* Posicionamiento absoluto para colocarlo donde quieras */
-  top: 150px; /* Un poco más abajo */
-  left: 150px; /* Un poco más a la derecha */
+  top: 50px; /* Comienza más arriba */
+  left: 170px; /* Un poco más a la derecha */
   z-index: 1000; /* Asegura que esté en el frente de otros elementos */
-  animation: fadeIn 1.5s ease-out; /* Animación de entrada */
+  animation: fadeInBounce 2s ease-out; /* Animación de entrada */
+  margin: 200px; /* Margen alrededor del título */
 }
 
-/* Animación para el título */
-@keyframes fadeIn {
-  from {
-    opacity: 0; /* Comienza con opacidad 0 (invisible) */
-    transform: translateY(-20px); /* Empuja el elemento hacia arriba */
+/* Animación personalizada */
+@keyframes fadeInBounce {
+  0% {
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(-100px) scale(0.8); /* Aparece desde arriba, reducido */
   }
-  to {
-    opacity: 1; /* Termina completamente visible */
-    transform: translateY(0); /* Termina en su posición original */
+  50% {
+    opacity: 1; /* Se vuelve visible */
+    transform: translateY(20px) scale(1.1); /* Rebota ligeramente hacia abajo y se agranda */
+  }
+  70% {
+    transform: translateY(-15px) scale(1); /* Rebota hacia arriba */
+  }
+  100% {
+    transform: translateY(0) scale(1); /* Termina en su posición normal */
   }
 }
 
@@ -189,21 +195,26 @@ main {
 }
 
 .info {
-  color: #ffffff; /* Color del texto */
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
-  padding: 15px; /* Relleno interno */
-  border-radius: 15px; /* Bordes redondeados */
-  margin-top: 10px; /* Margen superior de 10px */
+  color: #f9f9f9; /* Texto ligeramente gris para mejor contraste */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)); /* Fondo con degradado */
+  padding: 20px; /* Mayor relleno interno para más espacio */
+  border-radius: 20px; /* Bordes más redondeados */
+  margin-top: 15px; /* Mayor margen superior */
   width: 90%; /* Ocupa el 90% del contenedor */
-  max-width: 400px; /* Ancho máximo de 400px */
-  text-align: left; /* Alineación a la izquierda */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); /* Sombra alrededor del contenedor */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al hacer hover */
+  max-width: 450px; /* Ancho máximo ajustado */
+  text-align: left; /* Alineación del texto a la izquierda */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7); /* Sombra más sutil */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background 0.3s ease-out; /* Añadido background en transición */
+  font-family: 'Arial', sans-serif; /* Fuente moderna y limpia */
+  font-size: 1rem; /* Tamaño de texto ajustable */
+  line-height: 1.6; /* Mejor legibilidad */
+  overflow-wrap: break-word; /* Asegura que el texto no se desborde */
 }
 
 .info:hover {
-  transform: translateY(-10px); /* Desplaza hacia arriba al hacer hover */
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4); /* Sombra con opacidad cuando se pasa el mouse */
+  transform: translateY(-12px); /* Mayor desplazamiento hacia arriba */
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5); /* Sombra más grande y difuminada */
+  background: linear-gradient(135deg, rgba(50, 50, 50, 0.9), rgba(10, 10, 10, 0.8)); /* Fondo más claro al hover */
 }
 
 /* Responsive para pantallas pequeñas */

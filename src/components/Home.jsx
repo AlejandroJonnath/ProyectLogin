@@ -28,8 +28,8 @@ export function Home({ nombreUsuario }) {
     <div className="nav-text">
       <ul>
         <li><a href="../Formulario.jsx">Inicio</a></li>
-        <li><a href="#sobre">Grupo 3</a></li>
-        <li><a href="#contacto">Proyecto ITQ</a></li>
+        <li><a href="../Formulario.jsx">Grupo 3</a></li>
+        <li><a href="../Formulario.jsx">Proyecto ITQ</a></li>
       </ul>
     </div>
     <div className="nav-icons">
