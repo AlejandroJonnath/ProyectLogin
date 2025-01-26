@@ -61,20 +61,6 @@ export function Home({ nombreUsuario }) {
           </p>
         )}
 
-        <div className="image-container" onClick={() => handleClick(1)}>
-          {/* Segunda imagen: Bryan */}
-          <img src={imagen2} alt="Imagen 2" />
-        </div>
-        {/* Información de Bryan: se muestra si activeIndex es 1 */}
-        {activeIndex === 1 && (
-          <p className="info">
-            <strong>Nombre:</strong> Bryan Justin Antamba Enríquez<br />
-            <strong>Edad:</strong> 22 años<br />
-            <strong>Carrera:</strong> Desarrollo en Software<br />
-            <strong>Descripción:</strong> Soy el asesino de notas y el Jesús de las redes. Me gusta entrenar en las noches y soy bueno en los entrenamientos
-          </p>
-        )}
-
         <div className="image-container" onClick={() => handleClick(2)}>
           {/* Tercera imagen: David */}
           <img src={imagen3} alt="Imagen 3" />

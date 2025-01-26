@@ -13,7 +13,7 @@ export function Formulario() {
   const [logueado, setLogueado] = useState(false);
 
   // Lista de usuarios permitidos. Definí esto para validar solo ciertos nombres.
-  const usuariosPermitidos = ["Adriel", "Martín", "Bryan", "David"];
+  const usuariosPermitidos = ["Adriel", "Martín", "David"];
   // Contraseña única permitida. La utilicé para garantizar un nivel básico de seguridad en el acceso.
   const contraseñaPermitida = "proyectoITQ";
 
