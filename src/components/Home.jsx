@@ -27,26 +27,26 @@ export function Home({ nombreUsuario }) {
   <nav>
     <div className="nav-text">
       <ul>
-        <li><a href="../Formulario.jsx">Inicio</a></li>
-        <li><a href="../Formulario.jsx">Grupo 3</a></li>
-        <li><a href="../Formulario.jsx">Proyecto ITQ</a></li>
+        <li><a href="../Formulario.jsx">Inicio</a></li> {/* Manda a la página de inicio */}
+        <li><a href="../Formulario.jsx">Grupo 3</a></li>  {/* Manda a la página de inicio */}
+        <li><a href="../Formulario.jsx">Proyecto ITQ</a></li>  {/* Manda a la página de inicio */}
       </ul>
     </div>
-    <div className="nav-icons">
+    <div className="nav-icons"> {/* Iconos de redes sociales */}
       <ul>
         <li>
-          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
-            <img src={LogoInstagram} alt="Instagram" className="icon instagram" />
+          <a href="https://www.instagram.com" target="_blank" rel="noreferrer"> {/* Abre Instagram en una nueva pestaña */}
+            <img src={LogoInstagram} alt="Instagram" className="icon instagram" /> {/* logo de Instagram */}
           </a>
         </li>
         <li>
-          <a href="https://www.whatsapp.com" target="_blank" rel="noreferrer">
-            <img src={LogoWasap} alt="WhatsApp" className="icon whatsapp" />
+          <a href="https://www.whatsapp.com" target="_blank" rel="noreferrer"> {/* Abre WhatsApp en una nueva pestaña */}
+            <img src={LogoWasap} alt="WhatsApp" className="icon whatsapp" /> {/* logo de WhatsApp */}
           </a>
         </li>
         <li>
-          <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
-            <img src={LogoYoutube} alt="YouTube" className="icon youtube" />
+          <a href="https://www.youtube.com" target="_blank" rel="noreferrer"> {/* Abre YouTube en una nueva pestaña */}
+            <img src={LogoYoutube} alt="YouTube" className="icon youtube" /> { /* logo de YouTube */}
           </a>
         </li>
       </ul>
