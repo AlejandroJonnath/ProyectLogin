@@ -27,7 +27,7 @@ export function Home({ nombreUsuario }) {
   <nav>
     <div className="nav-text">
       <ul>
-        <li><a href="../Formulario.jsx">Inicio</a></li> {/* Manda a la página de inicio */}
+        <li><a href="../Formulario.jsx">Cerrar Sesión</a></li> {/* Manda a la página de inicio */}
         <li><a href="../Formulario.jsx">Grupo 3</a></li>  {/* Manda a la página de inicio */}
         <li><a href="../Formulario.jsx">Proyecto ITQ</a></li>  {/* Manda a la página de inicio */}
       </ul>
