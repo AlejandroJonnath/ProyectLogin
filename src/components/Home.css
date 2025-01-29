@@ -217,128 +217,71 @@ main {
   background: linear-gradient(135deg, rgba(50, 50, 50, 0.9), rgba(10, 10, 10, 0.8)); /* Fondo más claro al hover */
 }
 
-/* Responsivo para pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-body{
-  width: 100%;
-  height: auto;
-}
-
-  header {
-    padding: 5px 10px;
-    flex-direction: column; /* Cambia la dirección a columna */
-    align-items: flex-start; /* Alinea los elementos al inicio */
-  }
-
-  .nav-text ul {
-    flex-direction: column; /* Coloca los elementos en columna */
-    gap: 10px; /* Reduce el espacio entre elementos */
-  }
-
-  .nav-icons {
-    margin-right: 0; /* Elimina el margen */
-    margin-top: 10px; /* Añade un margen superior */
-  }
-
+/* Responsive para pantallas pequeñas (800px y menos) */
+@media (max-width: 1010px) {
   .tituloBienvenida {
-    font-size: 15px;
-    top: 130px;
-    left: 10px;
-    margin: 20px; /* Reduce el margen */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    padding: 15px; /* Ajusta el padding */
+    width: 20%; /* Ajusta el ancho */
+    top: 160px; /* Ajusta la posición superior */
+    left: 10px; /* Ajusta la posición izquierda */
+    margin: 10px; /* Ajusta el margen */
+    text-align: center; /* Centra el texto */
   }
 
   .parrafoBienvenida {
-    font-size: 16px;
-    padding: 15px 20px;
-    width: 95%; /* Más ancho en móviles */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    padding: 10px 15px; /* Ajusta el padding */
+    width: 90%; /* Ajusta el ancho */
+    margin-top: 10px; /* Ajusta el margen superior */
   }
 
-  main {
-    flex-direction: column; /* Organiza los elementos en columna */
-    gap: 15px; /* Reduce el espacio entre los elementos */
-    margin-top: 80px; /* Reduce el margen superior */
+  nav ul {
+    flex-direction: column; /* Coloca los elementos del menú en una columna */
+    gap: 10px; /* Reduce el espacio entre los elementos */
+    text-align: center; /* Centra el texto */
   }
 
   .image-container {
-    width: 30%; /* Las imágenes ocupan el ancho completo */
-    height: auto; /* Altura ajustada automáticamente */
+    width: 27%; /* Ajusta el tamaño de las imágenes */
+    height: 27%; /* Ajusta la altura automáticamente */
   }
 
   .info {
-    width: 100%; /* Ocupa el ancho completo */
-    padding: 15px; /* Reduce el relleno */
-    font-size: 0.9rem; /* Reduce el tamaño del texto */
-  }
-}
-
-@media (max-width: 1820px) {
-  header {
-    padding: 5px 10px;
-    flex-direction: column; /* Cambia la dirección a columna */
-    align-items: flex-start; /* Alinea los elementos al inicio */
+    width: 90%; /* Ajusta el ancho */
+    padding: 10px; /* Ajusta el padding */
+    font-size: 14px; /* Ajusta el tamaño del texto */
   }
 
-  .nav-text ul {
+  main {
     flex-direction: column; /* Coloca los elementos en columna */
-    gap: 10px; /* Reduce el espacio entre elementos */
-  }
-
-  .nav-icons {
-    margin-right: 0; /* Elimina el margen */
-    margin-top: 10px; /* Añade un margen superior */
-  }
-
-  .tituloBienvenida {
-    font-size: 15px;
-    top: 130px;
-    left: 10px;
-    margin: 5px; /* Reduce el margen */
-  }
-
-  .parrafoBienvenida {
-    font-size: 16px;
-    padding: 15px 20px;
-    width: 95%; /* Más ancho en móviles */
-  }
-
-  main {
-    flex-direction: column; /* Organiza los elementos en columna */
-    gap: 15px; /* Reduce el espacio entre los elementos */
-    margin-top: 80px; /* Reduce el margen superior */
-  }
-
-  .image-container {
-    bottom: -50px;
-    width: 30%; /* Las imágenes ocupan el ancho completo */
-    height: auto; /* Altura ajustada automáticamente */
-  }
-
-  .info {
-    width: 100%; /* Ocupa el ancho completo */
-    padding: 15px; /* Reduce el relleno */
-    font-size: 0.9rem; /* Reduce el tamaño del texto */
+    gap: 15px; /* Espaciado entre elementos */
+    margin-top: 80px; /* Ajusta el margen superior */
+    padding: 20px 10px; /* Ajusta el padding */
   }
 }
 
-
-
-/* Responsivo para pantallas grandes (4K y más) */
-@media (min-width: 2144px) {
+/* Responsive para pantallas grandes (2K) */
+@media (min-width: 2115px) {
   .tituloBienvenida {
-    font-size: 50px; /* Texto más grande para pantallas grandes */
+    font-size: 36px; /* Ajusta el tamaño del texto */
+    max-width: 1200px; /* Aumenta el ancho máximo */
+    top: 100px; /* Ajusta la posición superior */
+    left: 200px; /* Ajusta la posición izquierda */
+    margin: 50px; /* Ajusta el margen */
   }
 
   .parrafoBienvenida {
     font-size: 20px; /* Ajusta el tamaño del texto */
-    width: 70%; /* Más espacio en pantallas grandes */
-  }
-
-  .info {
-    font-size: 1.2rem; /* Aumenta el tamaño del texto */
+    max-width: 1200px; /* Aumenta el ancho máximo */
   }
 
   .image-container {
-    width: 300px; /* Tamaño mayor para las imágenes */
-    height: 300px;
+    width: 300px; /* Ajusta el tamaño de las imágenes */
+    height: 300px; /* Ajusta el tamaño de las imágenes */
+  }
+
+  nav ul li a {
+    font-size: 20px; /* Ajusta el tamaño del texto del menú */
   }
 }
